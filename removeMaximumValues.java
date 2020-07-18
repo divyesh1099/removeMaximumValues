@@ -18,23 +18,41 @@ public class removeMaximumValues{
         System.out.println("Enter the number of maximum numbers to remove all of their instances");
         int n=sc.nextInt();
         //Remove the largest value n number of times
-        String t=al.get(0);
-        for(int m=0;m<=n;m++){//Ye wala for lop is to remove the maximum values n number of times
-        for(int i=0;i<=size;i++){
-            if((t.compareTo(al.get(i)))>=0){
-                t=al.get(i);
+        int t=0;
+        int counter=0;
+        // System.out.println(t);
+        for(int m=0;m<n;m++){//Ye wala for lop is to remove the maximum values n number of times
+            for(int i=0;i<size;i++){
+                if((al.get(1).compareTo(al.get(i)))<=0){
+                    t=i;
+                    // System.out.println(t);
+                    // counter++;
+                }
+            }
+            //REMOVE ALL INSTANCES OF BIGGEST ELEMENT KARNE KE LIYE LOOP
+            for(int i=0;i<size;i++){
+                // System.out.println("IIIIIII");
+                if(t!=i){
+                    // System.out.println("tttttttttt");
+                    if(al.get(t).equals(al.get(i))){
+                        // System.out.println("============");
+                        // counter++;
+                        al.remove(t);
+                    }
+                }
             }
         }
-        //Mera ye remove chal nai ra
-        al.remove(t);//meko BAS ye line me error aa raay, ye bata meko bas
-        }
+        
+        // System.out.println("Counter:"+counter);
+        // System.out.println("jsbdjcbjSBBSDC"+t);
         // System.out.println(al.get(0).getType());
-        System.out.println("TEST " +(al.get(0)).compareTo((al.get(1))));
+        // System.out.println("TEST " +(al.get(0)).compareTo((al.get(1))));
         //Print the final list
         System.out.println("Here's the final List");
-        for(int i=0;i<=size;i++){
-            System.out.println(al.get(i));
-        }
+        // for(int i=0;i<size;i++){
+        //     System.out.println(al.get(i));
+        // }
+        System.out.println(al);
         sc.close();
     }
 }
