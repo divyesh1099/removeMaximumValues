@@ -19,8 +19,9 @@ public class removeMaximumValues{
         int n=sc.nextInt();
         //Remove the largest value n number of times
         int t=0;
-        int counter=0;
+        // int counter=0;
         // System.out.println(t);
+        // for(int k=0;k<n;k++){
         for(int m=0;m<n;m++){//Ye wala for lop is to remove the maximum values n number of times
             for(int i=0;i<size;i++){
                 if((al.get(1).compareTo(al.get(i)))<=0){
@@ -28,9 +29,14 @@ public class removeMaximumValues{
                     // System.out.println(t);
                     // counter++;
                 }
+                else{
+                    t=1;
+                }
             }
+            // System.out.println(al.size());
             //REMOVE ALL INSTANCES OF BIGGEST ELEMENT KARNE KE LIYE LOOP
-            for(int i=0;i<size;i++){
+            for(int i=1;i<size;i++){
+                // System.out.println("SIZE:"+al.size());
                 // System.out.println("IIIIIII");
                 if(t!=i){
                     // System.out.println("tttttttttt");
@@ -42,6 +48,7 @@ public class removeMaximumValues{
                 }
             }
         }
+        // }
         
         // System.out.println("Counter:"+counter);
         // System.out.println("jsbdjcbjSBBSDC"+t);
